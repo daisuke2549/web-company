@@ -41,7 +41,7 @@
                 <h2>会社ブログ</h2>
                 <dl>
                 <?php
-                $infoPosts = get_posts('numberposts=3&category=4');
+                $infoPosts = get_posts('numberposts=3&category=1');
                 foreach($infoPosts as $post): ?>
                     <dt><?php the_time('Y年m月d日'); ?></dt>
                     <dd>
