@@ -1,9 +1,9 @@
 <div id="footMenu">
         <ul>
-                <li class="home"><a href="index.html">ホーム</a></li>
-                <li><a href="service.html">事業内容</a></li>
-                <li><a href="company.html">会社概要</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
+                <li class="home"><a href="<?php bloginfo('url'); ?>/index">ホーム</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/service">事業内容</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/company">会社概要</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/contact">お問い合わせ</a></li>
         </ul>
     </div><!-- /#footerMenu -->
     <div id="footer">

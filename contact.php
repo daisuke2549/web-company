@@ -7,26 +7,10 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="css/common.css" type="text/css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript">
-$(function() {
-    $('#slide').slideshow({
-        autoSlide    : true,
-        effect       : 'fade',
-        type         : 'repeat',
-        interval     : 3000,
-        duration     : 500,
-        imgHoverStop : true,
-        navHoverStop : true
-    });
-    $(window).load(function() {
-        $(".topNaviColumn").uniformHeight();
-    });
-});
-</script>
-<title>Web-company</title>
+<title>あなたのサイト名などお書きください</title>
 </head>
 <body>
 <div id="container">
@@ -34,7 +18,7 @@ $(function() {
         <h1><a href="index.html"><img src="images/logo.png" alt="SAMPLE WEB SITE" /></a></h1>
         <div id="menu">
             <ul>
-                <li class="home"><a href="index.php">ホーム</a></li>
+                <li class="home"><a href="index.html">ホーム</a></li>
                 <li><a href="service.html">事業内容</a></li>
                 <li><a href="company.html">会社概要</a></li>
 				<li><a href="archive-news.html">お知らせ</a></li>
@@ -111,7 +95,7 @@ $(function() {
     </div><!-- /#contents -->
     <div id="footMenu">
         <ul>
-                <li class="home"><a href="index.php">ホーム</a></li>
+                <li class="home"><a href="index.html">ホーム</a></li>
                 <li><a href="service.html">事業内容</a></li>
                 <li><a href="company.html">会社概要</a></li>
                 <li><a href="contact.html">お問い合わせ</a></li>

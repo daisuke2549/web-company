@@ -176,6 +176,7 @@ table td li {
 /* ========TEMPLATE LAYOUT======== */
 #container {
     width:940px;
+    height: 1300px;
     margin:30px auto;
     padding:20px;
     border:1px solid #ddd;
@@ -184,6 +185,7 @@ table td li {
     box-shadow:0 0 10px #bfbfbf;
     background:#fff;
 }
+
 
 #header {
     position:relative;

@@ -3,7 +3,7 @@
         <div class="topNavi">
             <div class="topNaviColumn">
                 <h2>社長メッセージ</h2>
-                <div class="topNaviPhoto"><img src="<?php echo get_template_directory_uri(); ?>/img/sample.png"></div>
+                <div class="topNaviPhoto"><img src="<?php echo get_template_directory_uri(); ?>/img/mypicture.png" width="100px"></div>
                 <p>ホームページを御覧いただきありがとうございます。弊社はお客様満足度を最優先いたします。</p>
 
             </div><!-- /.topNaviColumn -->
@@ -76,9 +76,8 @@
             <h3>事業内容</h3>
                 <h4>ネット事業</h4>
                 <ul>
-                    <li><a href="service.html#s1">ホームページ制作</a></li>
-                    <li><a href="service.html#s2">広告代理</a></li>
-
+                    <li><a href="<?php bloginfo('url'); ?>/web-company-company-2/">ホームページ制作</a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/web-company-company-2/">広告代理</a></li>
                 </ul>
 
             </div><!-- /.bnrR -->
