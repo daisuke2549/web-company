@@ -25,7 +25,7 @@
             </ul>
         </div><!-- /#menu -->
     </div><!-- /#header -->
-    <div id="contents">
+    <div id="contents2">
         <div id="conL">
         <?php if(have_posts()): while(have_posts()): the_post();?>
         <h2><?php the_title(); ?></h2>

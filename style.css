@@ -242,6 +242,12 @@ table td li {
     transform: translate(0);
 }
 
+#contents2 {
+    float:left;
+    width:940px;
+    padding:10px 0;
+    background:#fff;
+}
 
 
 #conL {
