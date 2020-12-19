@@ -32,4 +32,5 @@
             </div><!-- /.information -->
         </div><!-- /#conL -->
     </div><!-- /#contents -->
+    <?php wp_pagenavi(); ?>
     <?php get_footer(); ?>

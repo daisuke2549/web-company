@@ -8,16 +8,15 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-<link rel="stylesheet" href="/css/style.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/common.js"></script>
 <script type="text/javascript">
 $(function() {
     $('#slide').slideshow({
         autoSlide    : true,
         effect       : 'fade',
         type         : 'repeat',
-        interval     : 1000,
+        interval     : 3000,
         duration     : 500,
         imgHoverStop : true,
         navHoverStop : true
@@ -32,7 +31,7 @@ $(function() {
 <body>
 <div id="container">
     <div id="header">
-        <h1><a href="<?php bloginfo('url'); ?>/index.php"><img src="images/logo.png" alt="Web company" /></a></h1>
+    <h1><a href="<?php bloginfo('url'); ?>/index.php">Web制作屋さん</a></h1>
         <div id="menu">
             <ul>
             <?php wp_nav_menu( array(

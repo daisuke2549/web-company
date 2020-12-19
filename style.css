@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*
-theme Name:Web-company
+theinformatione Name:Web-company
 Author:Daisuke Sasaki
 Description: 自作テーマ
 version： 1.0.0
@@ -151,9 +151,10 @@ table th {
     padding:5px;
     border:1px solid #999;
     border-width:0 0 1px 1px;
-    background:#EFEBEF;
+    background:blue;
     font-weight:bold;
     text-align:left;
+    color: white;
 }
 
 table td {
@@ -176,7 +177,31 @@ table td li {
 /* ========TEMPLATE LAYOUT======== */
 #container {
     width:940px;
-    height: 1300px;
+    height: 1380px;
+    margin:30px auto;
+    padding:20px;
+    border:1px solid #ddd;
+    -moz-box-shadow:0 0 10px #bfbfbf; /* Firefox用 */  
+    -webkit-box-shadow:0 0 10px #bfbfbf; /* Safari,Google Chrome用 */ 
+    box-shadow:0 0 10px #bfbfbf;
+    background:#fff;
+}
+
+#container-single{
+    width:940px;
+    height: 740px;
+    margin:30px auto;
+    padding:20px;
+    border:1px solid #ddd;
+    -moz-box-shadow:0 0 10px #bfbfbf; /* Firefox用 */  
+    -webkit-box-shadow:0 0 10px #bfbfbf; /* Safari,Google Chrome用 */ 
+    box-shadow:0 0 10px #bfbfbf;
+    background:#fff;
+}
+
+#container-page{
+    width:940px;
+    height: ９30px;
     margin:30px auto;
     padding:20px;
     border:1px solid #ddd;
@@ -192,9 +217,7 @@ table td li {
     width:940px;
     margin-bottom:20px;
 }
-h1 img{
-	width: 200px;
-}
+
 #menu {
     position:absolute;
     right:0;
@@ -210,7 +233,16 @@ h1 img{
     width:940px;
     padding:10px 0;
     background:#fff;
+    opacity: 0.0;
+    transform: translateX(-500px);
+    transition: all 1s;
 }
+#contents.scrollin {
+    opacity: 1;
+    transform: translate(0);
+}
+
+
 
 #conL {
     float:left;
@@ -227,10 +259,44 @@ h1 img{
     width:940px;
     margin-top:10px;
 }
+#footMenu-single{
+    float:left;
+    width:940px;
+   position: relative;
+   top: 500px;
+}
+#footMenu-single ul {
+    margin:5px 0;
+    padding:0px 0;
+    text-align:center;
+    border-top:1px solid #ddd;
+}
+
+#footMenu-single li {
+    display:inline;
+    margin:0 0 0 20px;
+    list-style:none;
+}
+
+#footMenu-single li a {
+    color:#000;
+}
+
+#footMenu-single li a:hover {
+    color:#666;
+    text-decoration:underline;
+}
+
 
 #footer {
     clear:both;
     width:940px;
+}
+#footer-single {
+    clear:both;
+    width:940px;
+    top:500px;
+    position: relative;
 }
 
 /* ========HEADER CUSTOMIZE======== */
@@ -238,16 +304,16 @@ h1 img{
     margin:0;
     padding:20px 0 0 0;
     font-size:30px;
-    color:#770000;
+    color:blue;
     line-height:1.0;
 }
 
 #header h1 a {
-    color:#770000;
+    color:blue;
 }
 
 #header h1 a:hover {
-    color:#770000;
+    color:blue;
 }
 
 /* ========MENU CUSTOMIZE======== */
@@ -381,7 +447,25 @@ h1 img{
     margin-left:20px;
     padding:0 0 2em 0;
     background:#eee;
+    opacity: 0.0;
+    transform: translateX(-300px);
+    transition: all 1s;
 }
+.topNaviColumn.scrollin {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+
+.topNaviPhoto img{
+    transition: 4.0s;
+    transform: rotateX(0deg );
+}
+
+.topNaviPhoto img:hover {
+    transform: rotateY( 360deg );
+}
+
 
 .topNaviImg {
     margin:0;
@@ -398,14 +482,23 @@ h1 img{
 
 .topNaviDetail a {
     padding:0 0 0 7px;
-    background:url("../images/bg_arrow.gif") no-repeat left 50%;
+
 }
 
 /* INFORMATION CUSTOMIZE */
 .information {
     width:620px;
     margin-bottom:20px;
+    opacity: 0.0;
+    transform: translateX(-300px);
+    transition: all 1s;
 }
+.information.scrollin {
+    opacity: 1;
+    transform: translate(0);
+}
+
+
 
 .information dl {
     margin:0;
@@ -418,13 +511,23 @@ h1 img{
 .information dd {
     margin:0 0 5px 0;
     padding:5px 0px 5px 9em;
-    background:url("../images/bg_dotline.gif") 0 100% repeat-x;
 }
 
 /* SUBMENU CUSTOMIZE */
 .submenu {
     border:1px solid #ddd;
+    opacity: 0.0;
+    transform: translateX(-300px);
+    transition: all 1s;
 }
+
+.submenu.scrollin {
+    opacity: 1;
+    transform: translate(0);
+}
+
+
+
 
 .submenu h3 {
     border:none;
@@ -438,7 +541,6 @@ h1 img{
     margin:0;
     padding:0 0 0 7px;
     list-style:none;
-    background:url("../images/bg_arrow.gif") no-repeat left 50%;
 }
 
 .submenu p {
@@ -529,12 +631,11 @@ h1 img{
     padding:0 0 0 12px;
     color:#fff;
     font-size:11px;
-    background:#000 url("../images/bg_pagetop.gif") 0 50% no-repeat;
 }
 
 .btn1{
 	min-width: 200px;
-	background: #f07d00;
+	background: gray;
 	border: none;
 	color: #fff;
 	padding: 7px 20px;
@@ -574,7 +675,7 @@ h1 img{
 }
 
 .b_img{
-	width: 60px;
+	width: 100px;
 	height: 60px;
 	margin-right: 10px;
 	background: #ddd;

@@ -28,6 +28,19 @@ function my_setup()
     )
   );
 }
+function my_widget_init() {
+  register_sidebar(
+  array(
+  'name' => 'サイドバー', //表示するエリア名
+  'id' => 'sidebar', //id
+  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<div class="widget-title">',
+  'after_title' => '</div>',
+  )
+  );
+  }
+  add_action( 'widgets_init', 'my_widget_init' );
 
 add_theme_support('post-thumbnails');
 add_image_size('thumbside', 85, 85, true);
@@ -41,3 +54,14 @@ function register_menu() {
 // add_theme_support( $feature, $arguments );
 // }
 // add_action( 'after_setup_theme', 'custom_theme_setup' );
+
+
+
+function post_has_archive( $args, $post_type ) {
+  if ( 'post' == $post_type ) {
+      $args['rewrite'] = true;
+      $args['has_archive'] = 'blog'; // スラッグ名
+  }
+  return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );

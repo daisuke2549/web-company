@@ -14,14 +14,14 @@
 <title>Web-company</title>
 </head>
 <body>
-<div id="container">
+<div id="container-single">
     <div id="header">
-        <h1><a href="index.html"><img src="images/logo.png" alt="Web company" /></a></h1>
+    <h1><a href="<?php bloginfo('url'); ?>/index.php">Web制作屋さん</a></h1>
         <div id="menu">
             <ul>
-                <li class="home"><a href="index.php">ホーム</a></li>
-                <li><a href="service.html">事業内容</a></li>
-                <li><a href="company.html">会社概要</a></li>
+                <li class="home"><a href="<?php bloginfo('url'); ?>/index.php">ホーム</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/web-company-company-2/">事業内容</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/web-company-company/">会社概要</a></li>
             </ul>
         </div><!-- /#menu -->
     </div><!-- /#header -->
@@ -32,10 +32,22 @@
         <?php the_time('Y年m月d日'); ?>
         <?php the_content(); ?>
        <?php endwhile; endif; ?>
-        <a href="<?php bloginfo('url'); ?>contact.php"><button class="btn1">お問い合わせ</button></a>
         </div><!-- /#conL -->
     </div><!-- /#contents -->
-    <?php get_footer(); ?>
-        </div><!-- /#conL -->
-    </div><!-- /#contents -->
-    <?php get_footer(); ?>
+    <div id="footMenu-single">
+        <ul>
+                <li class="home"><a href="<?php bloginfo('url'); ?>/index">ホーム</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/service">事業内容</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/company">会社概要</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/contact">お問い合わせ</a></li>
+        </ul>
+    </div><!-- /#footerMenu -->
+    <div id="footer-single">
+        <div class="copyright">Copyright made by Web company(Daisuke Sasaki)</div>
+    </div><!-- /#footer -->
+</div><!-- /#container -->
+<div id="pageTop">
+    <a href="#">ページのトップへ戻る</a>
+</div><!-- /#pageTop -->
+</body>
+</html>

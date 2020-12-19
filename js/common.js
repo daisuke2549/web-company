@@ -377,3 +377,63 @@ $.fn.uniformHeight = function() {
     });
     $(this).height(maxHeight);
 };
+
+$(function() {
+    $("#header h1").hide().fadeIn(2000);
+});
+
+
+$(function() {
+    $("#menu li").hide().fadeIn(2000);
+});
+
+$(function(){
+    $(window).scroll(function (){
+        $('.topNaviColumn').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 0){
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
+
+$(function(){
+    $(window).scroll(function (){
+        $('.information').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 0){
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
+$(function(){
+    $(window).scroll(function (){
+        $('.submenu').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 0){
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
+
+$(function(){
+    $(window).scroll(function (){
+        $('#contents').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 0){
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
